@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using MQTTnet.Client.Publishing;
+using MQTTnet.Packets;
+using MQTTnet.Protocol;
 
 namespace MQTTnet
 {
@@ -13,6 +17,8 @@ namespace MQTTnet
         public string ClientId { get; }
 
         public MqttApplicationMessage ApplicationMessage { get; }
+
+        public MqttClientPublishResult Response { get; set; }
 
         public bool ProcessingFailed { get; set; }
     }
